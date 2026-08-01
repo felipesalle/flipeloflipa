@@ -35,7 +35,7 @@
     "id": "liga-prepa",
     "nombre": "Gestión de Liga Escolar (Preparatoria)",
     "categoria": "Gestión de Ligas",
-    "descripcion": "Gestión de liga escolar nivel Preparatoria, fixturing de torneos, rol de juegos, resultados y tablas de posiciones generales.",
+    "descripcion": "Gestión de liga escolar nivel Preparatoria, fixturing de torneos, rol de partidos, resultados y tablas de posiciones generales.",
     "estado": "Activa",
     "badge_color": "cyan",
     "url": "https://salleprepa.github.io/liga/",
@@ -77,6 +77,22 @@
     "destacado": true,
     "metricas": "Primaria • Liga Escolar • Clasificación",
     "etiquetas": ["Primaria", "Torneos", "Liga Infantil"],
+    "version": "v1.0"
+  },
+  {
+    "id": "evaluacion-diagnostico",
+    "nombre": "Evaluación Diagnóstica (Secu & Prepa)",
+    "categoria": "Herramientas Docentes",
+    "descripcion": "Gestión de la evaluación diagnóstica de nivel Secundaria y Preparatoria, valoración del estado motor inicial y salud estudiantil.",
+    "estado": "Activa",
+    "badge_color": "purple",
+    "url": "https://salleprimaria.github.io/diagnostico/",
+    "local_url": "https://salleprimaria.github.io/diagnostico/",
+    "repo_url": "https://github.com/salleprimaria/diagnostico",
+    "icono": "📋",
+    "destacado": true,
+    "metricas": "Diagnóstico • Secu & Prepa • Test Motor",
+    "etiquetas": ["Secundaria", "Preparatoria", "Diagnóstico", "Evaluación"],
     "version": "v1.0"
   }
 ]
