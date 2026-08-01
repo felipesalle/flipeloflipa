@@ -141,15 +141,20 @@ function renderApps() {
         </div>
       </div>
 
-      <div class="card-actions">
+      <div class="card-actions" style="display: flex; gap: 8px; flex-wrap: wrap;">
         ${isUpcoming ? `
-          <button type="button" class="btn-launch disabled">
+          <button type="button" class="btn-launch disabled" style="flex: 1;">
             ⏳ En Desarrollo
           </button>
         ` : `
-          <a href="${app.url}" class="btn-launch">
+          <a href="${app.url}" class="btn-launch" style="flex: 2;" target="_blank" rel="noopener">
             Abrir Aplicación <b>→</b>
           </a>
+          ${app.repo_url && app.repo_url !== '#' ? `
+            <a href="${app.repo_url}" class="btn-secondary" style="flex: 1; text-align: center; text-decoration: none;" target="_blank" rel="noopener" title="Ver repositorio en GitHub">
+              🐙 Repo
+            </a>
+          ` : ''}
         `}
       </div>
     `;
