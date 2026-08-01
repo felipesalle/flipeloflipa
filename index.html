@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090d16" />
+  <meta name="description" content="Portal central de herramientas digitales, juegos de educación física, deportes y salud deportiva de Profe. Felipe." />
+  <title>Profe. Felipe | Ecosistema Digital de Educación Física & Deportes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <a href="#" class="brand">
+      <span class="brand-badge">PF</span>
+      <span>Profe. Felipe</span>
+    </a>
+    <nav class="nav-right" aria-label="Navegación principal">
+      <a href="#apps" class="nav-link">Aplicaciones</a>
+      <a href="#roadmap" class="nav-link">Próximos Proyectos</a>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema">☀️</button>
+      <button id="openSuggestionBtn" class="btn-primary" type="button">💡 Sugerir Herramienta</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">ECOSISTEMA DIGITAL DOCENTE • EDUCACIÓN FÍSICA & DEPORTES</p>
+      <h1>Todas tus herramientas pedagógicas,<br /><span class="gradient-text">en un solo lugar.</span></h1>
+      <p class="hero-subtitle">
+        Explora nuestros catálogos docentes de juegos, pizarras tácticas de entrenamiento, 
+        planificadores automáticos de clase y módulos de salud escolar.
+      </p>
+
+      <!-- Stats Bar -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div id="statActiveApps" class="stat-number">3+</div>
+          <div class="stat-label">Apps Web Activas</div>
+        </div>
+        <div class="stat-card">
+          <div id="statTotalItems" class="stat-number">800+</div>
+          <div class="stat-label">Actividades & Esquemas</div>
+        </div>
+        <div class="stat-card">
+          <div id="statUsers" class="stat-number">100%</div>
+          <div class="stat-label">Acceso Libre Docente</div>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+      <div class="search-container">
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" class="search-input" type="search" placeholder="Busca herramientas: juegos, fútbol, lluvia, fisioterapia, rúbricas…" autocomplete="off" />
+          <kbd class="kbd-badge">⌘ K</kbd>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apps Catalog Section -->
+    <section id="apps">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">LANZADOR DE APLICACIONES</p>
+          <h2 class="section-title">Herramientas Web Disponibles</h2>
+        </div>
+      </div>
+
+      <!-- Category Filter Bar -->
+      <div id="filtersContainer" class="filters-section"></div>
+
+      <!-- Dynamic Apps Grid -->
+      <div id="appsGrid" class="apps-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- Roadmap & Upcoming Section -->
+    <section id="roadmap" class="roadmap-section">
+      <div class="roadmap-header">
+        <p class="eyebrow">HOJA DE RUTA & FUTURO</p>
+        <h2>Próximas Aplicaciones en Desarrollo</h2>
+        <p>Estamos trabajando activamente en nuevas herramientas gratuitas para facilitar tu labor docente diaria.</p>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-item">
+          <h4>📊 Calculadora de Salud y Test Físicos</h4>
+          <p>Herramienta para calcular el IMC escolar, percentiles de desarrollo y marcas para pruebas como Course Navette y Salto Horizontal.</p>
+        </div>
+        <div class="roadmap-item">
+          <h4>📋 Generador de Rúbricas y Evaluaciones</h4>
+          <p>Diseña fácilmente instrumentos de evaluación formativa y sumativa en PDF ajustados a planes docentes oficiales.</p>
+        </div>
+        <div class="roadmap-item">
+          <h4>🥇 Organizador de Torneos Escolares</h4>
+          <p>Genera en segundos el fixturing de torneos (todos contra todos, eliminación), tablas de posiciones y rol de partidos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Suggestion CTA Banner -->
+    <section class="cta-banner">
+      <h3>¿Tienes una idea para una nueva herramienta?</h3>
+      <p>Cuéntanos qué necesidad tienes en tus clases o entrenamientos y la desarrollaremos para agregarla a este portal.</p>
+      <button type="button" class="btn-primary" onclick="document.getElementById('suggestionModal').showModal()">💡 Enviar Sugerencia o Idea</button>
+    </section>
+  </main>
+
+  <!-- Suggestion Modal Dialog -->
+  <dialog id="suggestionModal" class="modal-dialog">
+    <div class="modal-header">
+      <h3>💡 Sugerir Nueva Herramienta Web</h3>
+      <button id="closeSuggestionBtn" class="modal-close" type="button" aria-label="Cerrar modal">×</button>
+    </div>
+    <form id="suggestionForm">
+      <div class="form-group">
+        <label for="teacherName">Tu Nombre o Escuela (opcional):</label>
+        <input type="text" id="teacherName" placeholder="Ej. Profe. Juan Pérez" />
+      </div>
+      <div class="form-group">
+        <label for="appCategory">Categoría Sugerida:</label>
+        <select id="appCategory">
+          <option value="Educación Física">Educación Física</option>
+          <option value="Deportes">Deportes & Entrenamiento</option>
+          <option value="Salud / Fisioterapia">Salud / Fisioterapia</option>
+          <option value="Herramientas Docentes">Herramientas Administrativas</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="appIdea">Describe tu idea o necesidad:</label>
+        <textarea id="appIdea" rows="4" required placeholder="Ej. Me gustaría una app para sortear equipos de forma equitativa por habilidades..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%;">⚡ Enviar Propuesta</button>
+    </form>
+  </dialog>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>⚽ <strong>Profe. Felipe | Ecosistema Digital Docente</strong></p>
+      <p>Recursos digitales gratuitos desarrollados para profesores de Educación Física y entrenadores deportivos.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
