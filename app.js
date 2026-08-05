@@ -30,7 +30,7 @@ function toggleTheme() {
 // --- Carga de Aplicaciones desde JSON ---
 async function loadApps() {
   try {
-    const res = await fetch('./data/apps.json');
+    const res = await fetch('./data/apps.json?v=' + Date.now(), { cache: 'no-cache' });
     if (!res.ok) throw new Error('No se pudo cargar data/apps.json');
     state.apps = await res.json();
     renderStats();
