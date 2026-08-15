@@ -94,5 +94,37 @@
     "metricas": "Diagnóstico • Secu & Prepa • Test Motor",
     "etiquetas": ["Secundaria", "Preparatoria", "Diagnóstico", "Evaluación"],
     "version": "v1.0"
+  },
+  {
+    "id": "docente-al-dia",
+    "nombre": "Docente Al Día (Planeaciones NEM)",
+    "categoria": "Herramientas Docentes",
+    "descripcion": "Planeaciones didácticas 100% editables en Word para Preescolar, Primaria y Secundaria, alineadas a los Campos Formativos y PDA de la Nueva Escuela Mexicana (NEM).",
+    "estado": "Activa",
+    "badge_color": "purple",
+    "url": "https://docente-al-dia.web.app/",
+    "local_url": "https://docente-al-dia.web.app/",
+    "repo_url": "",
+    "icono": "📑",
+    "destacado": true,
+    "metricas": "NEM 2026-2027 • Word Editable • Preescolar-Secundaria",
+    "etiquetas": ["NEM", "Planeaciones", "SEP", "Word", "Docentes"],
+    "version": "v1.0"
+  },
+  {
+    "id": "incidencias-lasalle",
+    "nombre": "Bitácora de Incidencias (La Salle)",
+    "categoria": "Herramientas Docentes",
+    "descripcion": "Bitácora digital y registro en tiempo real de incidencias, accidentes y seguimiento de primeros auxilios estudiantiles para el Colegio La Salle Tuxtla.",
+    "estado": "Activa",
+    "badge_color": "amber",
+    "url": "https://lasalle-tuxtla-incidencias.web.app/",
+    "local_url": "https://lasalle-tuxtla-incidencias.web.app/",
+    "repo_url": "",
+    "icono": "🩹",
+    "destacado": true,
+    "metricas": "Bitácora Firebase • Reportes PDF • La Salle Tuxtla",
+    "etiquetas": ["Incidencias", "Salud Escolar", "La Salle", "Primeros Auxilios", "Seguimiento"],
+    "version": "v1.0"
   }
 ]
